@@ -20,6 +20,7 @@ const Input = props => {
         type={inputType}
         id={htmlFor}
         onChange={props.onChange}
+        value={props.value}
       />
       {
         isInvalid(props)
