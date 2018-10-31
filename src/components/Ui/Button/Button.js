@@ -6,16 +6,16 @@ const Button = props => {
     classes.Button,
     classes[props.type]
   ]
+
   return (
     <button
-    onClick={props.onClick}
-    className={cls.join(' ')}
-    disabled={props.disabled}
+      onClick={props.onClick}
+      className={cls.join(' ')}
+      disabled={props.disabled}
     >
-      { props.children }
+      {props.children}
     </button>
   )
-
 }
 
 export default Button

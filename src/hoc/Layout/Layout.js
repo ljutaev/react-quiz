@@ -4,31 +4,37 @@ import MenuToggle from '../../components/Navigation/MenuToggle/MenuToggle'
 import Drawer from '../../components/Navigation/Drawer/Drawer'
 
 class Layout extends Component {
-  state={
+
+  state = {
     menu: false
   }
+
   toggleMenuHandler = () => {
     this.setState({
       menu: !this.state.menu
     })
   }
+
   menuCloseHandler = () => {
     this.setState({
       menu: false
     })
   }
+
   render() {
     return (
       <div className={classes.Layout}>
-        {console.log(this.props)}
-        <Drawer 
+
+        <Drawer
           isOpen={this.state.menu}
           onClose={this.menuCloseHandler}
         />
-        <MenuToggle 
+
+        <MenuToggle
           onToggle={this.toggleMenuHandler}
           isOpen={this.state.menu}
         />
+
         <main>
           { this.props.children }
         </main>
